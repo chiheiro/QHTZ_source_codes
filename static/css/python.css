@@ -1,0 +1,48 @@
+body {
+	text-rendering : optimizeLegibility;
+	-webkit-font-smoothing : antialiased;
+}
+a:hover {
+	text-decoration: none;
+}
+.article-card {
+	transition: 400ms;
+	margin-top: -140px;
+}
+.article-card:hover {
+	transform: scale(1.01);
+}
+
+.article-img , .article-meta {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.article-img {
+	max-width: 160px;
+	height: 160px;
+	overflow: hidden;
+}
+
+.article-img img {
+	width: 100%;
+	height: auto;
+}
+
+.article-meta {
+	max-width: 360px;
+	margin-top: 15px;
+	margin-left: 10px;
+}
+
+.article-meta h2 {
+	font-size: 26px;
+	font-weight: bold;
+	color: #000;
+	font-family: 'Playfair display'
+}
+
+.article-meta p {
+	color: #404040;
+}
+

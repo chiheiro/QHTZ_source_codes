@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block topfiles1 %}
+a{color:black;text-decoration:none;cursor:pointer;}
+.box{text-align: center;}
+.img{margin-top: 50px;}
+.logo{margin-top: 40px;}
+.text{font-size: 30px;margin-top: 30px;}
+.name{margin-top: 20px;}
+.botton{
+-webkit-transintion-duration:0.4s;
+transition-duration: 0.4s;
+padding: 10px 35px;
+text-align: center;
+background-color: white;
+color: black;
+border: 2px solid #000000;
+border-radius: 5px;
+margin-top: 40px;
+margin-bottom: 50px;
+text-decoration: none;
+cursor: pointer;
+}
+.botton:hover{
+background-color: #000000;
+color: white;
+}
+.yejiao {
+    font-family: "Bodoni MT Black";
+    color: #000000;
+    text-decoration: none;
+}
+.yejiao a:hover {
+    font-family: "Bodoni MT Black";
+    color: #2e52b8;
+}
+.header {
+    font-family: "Bodoni MT Black";
+    color: #000000;
+    margin-bottom: 40px;
+    text-decoration: none;
+}
+{% endblock topfiles1 %}
+{% block topfiles2 %}
+ul { list-style-type: none;}
+li { display: inline-block;}
+li { margin: 10px 0;}
+input.labelauty + label { font: 12px "Microsoft Yahei";}
+{% endblock topfiles2 %}
+{% block content %}
+<meta charset="utf-8">
+<title>来访者信息</title>
+<link rel="stylesheet" href="{% static 'css/checkbox.css' %}">
+<body>
+<div id="web_bg" style="background-image: url({% static "images/bg.jpg" %});"></div>
+<div class="box">
+    <div class="img"><img src="{% static 'images/header4.png' %}" alt=""></div>
+    <div class="logo"><a href="/index"><img src="{% static 'images/QING HUA TIAN ZANG.png' %}"></a></div>
+    <div class="text">您属于:</div>
+<form method="post">
+{% csrf_token %}
+<center>
+<ul class="dowebok">
+    <li><input type="radio" name="check" value="jianli1" data-labelauty="公司" style="margin-right: 34px"></li>
+    <li><input type="radio" name="check" value="jianli2" data-labelauty="个人" style="margin-left: 40px"></li>
+    <li>
+</ul>
+<input type="submit" value="确认"class="botton"></a></input>
+</form>
+<script src="{% static 'js/jquery-1.8.3.min.js' %}"></script>
+<script src="{% static 'js/jquery-labelauty.js' %}"></script>
+<script>
+$(function(){
+	$(':input').labelauty();
+});
+</script>
+</center>
+<div style="text-align:center;clear:both;">
+</form>
+</div>
+</div>
+{% endblock content %}

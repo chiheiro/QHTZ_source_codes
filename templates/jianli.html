@@ -1,0 +1,214 @@
+{% load staticfiles %}
+<html>
+<head>
+<!--手机meta-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon" />
+<link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon" />
+<style>
+.yejiao{color:#309f90;margin-top: 50px;text-align: center;line-height: 20px;}
+#web_bg{
+  position:fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height:100%;
+  min-width: 1000px;
+  z-index:-10;
+  zoom: 1;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-position: center 0;
+}
+#web_bg{
+  position:fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height:100%;
+  min-width: 1000px;
+  z-index:-10;
+  zoom: 1;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-position: center 0;
+}
+.yejiao {
+    font-family: "Microsoft YaHei UI";
+    color: #000000;
+    text-decoration: none;
+}
+.yejiao a:hover {
+    font-family: "Microsoft YaHei UI";
+    color: #2e52b8;
+}
+
+<style type="text/css">
+#abc {
+    font-family: "宋体";
+    color: #000000;
+}
+#abc a:hover {
+    font-family: "宋体";
+    color: #FF0000;
+}
+</style>
+</style>
+<div id="web_bg" style="background-image: url(/static/images/bg.jpg);"></div>
+<div class="container">
+  <div class="hero">
+    <h1 class="name"><strong>冯</strong> 浩</h1>
+    <span class="job-title">开发工程师</span>
+	<span class="job" ><a href="{{ words|safe }}"><strong>点我查看完整简历</strong></a></span>
+	<span class="job" ><a href="/index"><strong style="color:#23017b">返回首页</strong></a></span>
+    <span class="email"><strong>python4@yeah.net</strong></span>
+
+    <h2 class="lead">为初创企业和大公司开发和设计网络应用程序,以及网络程序解决方案</h2>
+  </div>
+</div>
+<!-- Skills and intrest section -->
+<div class="container">
+
+  <div class="sections">
+    <h2 class="section-title">技能</h2>
+
+    <div class="list-card">
+      <span class="exp">+ 6 points</span>
+      <div>
+        <h3>Python编程</h3>
+        <span>接口API,网络编程，爬虫scrapy，Django框架...</span>
+      </div>
+    </div>
+    
+    <div class="list-card">
+      <span class="exp">+ 8 points</span>
+      <div>
+        <h3>linux系统</h3>
+        <span>常见的linux发行版本线上业务的发布和维护...</span>
+      </div>
+    </div>  
+        
+    <div class="list-card">
+      <span class="exp">+ 6 points</span>
+      <div>
+        <h3>分布式存储数据库</h3>
+        <span>常见的分布式存储数据库如Mysql等，以及redis和mem数据库...</span>
+      </div>
+    </div>
+  </div>
+  <div class="sections">
+      <h2 class="section-title">语言及其他</h2>
+      
+      <div class="list-card">
+        <div>
+          <h3>编程语言</h3>
+          <span>Python, Java, Html, Css</span>
+        </div>
+      </div>  
+      <div class="list-card">
+        <div>
+          <h3>IDE</h3>
+          <span>VIm, Vs, Sublime Text3</span>
+        </div>
+      </div>    
+  </div>
+</div>
+<!-- Achievements -->
+
+<div class="container cards">
+  
+  <div class="card">
+    <div class="skill-level">
+      <h2>60</h2>
+      <span>%</span>
+    </div>
+
+    <div class="skill-meta">
+      <h3>Python</h3>
+      <span>能够解决几乎所有企业互联网项目中的需求，能够开发各种接口，以实现程序完整功能。熟练程序为60%</span>
+    </div>
+  </div>
+  <div class="card">
+    <div class="skill-level">
+      <h2>50</h2>
+      <span>%</span>
+    </div>
+
+    <div class="skill-meta">
+      <h3>linux</h3>
+      <span>作为编程的依托,linux系统也很熟练，基本命令，业务的上下线和维护等。熟练度为70%</span>
+    </div>
+  </div>  
+  <div class="card">
+    <div class="skill-level">
+      <h2>60</h2>
+      <span>%</span>
+    </div>
+
+    <div class="skill-meta">
+      <h3>Web</h3>
+      <span>有能力使用Django框架在完成需求的基础上进行项目代码的优化和升级。熟练度为60%</span>
+    </div>
+  </div>
+  <div class="card">
+    <div class="skill-level">
+      <h2>20</h2>
+      <span>%</span>
+    </div>
+
+    <div class="skill-meta">
+      <h3>Databases</h3>
+      <span>市面上的主流数据库，数据表的设计和优化，以及数据库的备份与维护。熟练度为50%</span>
+    </div>
+  </div>
+</div>
+<!-- Timeeline -->
+<div class="container">
+  <ol class="timeline">
+    <li>
+    <p class="line">Experiences</p>
+    <span class="point"></span>
+    <p class="description">
+      北京在信汇通科技有限公司
+    </p>
+    <span class="date">2018-11——至今</span>
+    </li>
+
+    <li>
+    <span class="point"></span>
+    <p class="description">
+      郑州华为云高校实验室
+    </p>
+    <span class="date">2018-5——2018-12</span>
+    </li>
+        <li>
+    <p class="line">Education</p>
+    <span class="point"></span>
+    <p class="description">
+      郑州华信学院
+    </p>
+    <span class="date">2016 —— 2019</span>
+    </li>
+        <li>
+    <span class="point"></span>
+    <p class="description">
+      普通大专
+    </p>
+    <!-- <span class="date">2013 - 2008</span> -->
+    </li>
+  </ol>
+</div>
+<br><br>
+<div class="yejiao">
+<font size="2">&copy; 2018 清花天藏 豫ICP备19034559号-1</font><br/>
+<font size="1"> 本网站所有内容均不会用来盈利，如有侵权，请<a href='/connect'>联系作者</a>删除,转载请注明</font>
+</div>
+</body>
+</html>

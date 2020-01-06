@@ -1,0 +1,93 @@
+{% extends 'index_base.html' %}
+{% load staticfiles%}
+{% block topfiles1 %}
+{% endblock topfiles1 %}
+{% block topfiles2 %}
+{% endblock topfiles2 %}
+{% block content %}
+<meta charset="utf-8">
+<title>清花天藏</title>
+<body>
+{%  if web_load %}
+	<div id="{{web_load}}">
+	<div id="preloader-inner"></div>
+		<div id="txt_words"><p>Loading.......</p></div>
+		<div id="web_bg" style="background-image: url({% static "images/bg.jpg" %});"></div>
+	</div>
+{% else %}
+	{{pass}}
+{% endif %}
+<div id="web_bg" style="background-image: url({% static "images/bg.jpg" %});"></div>
+<div class="yetou">
+    <div class="biaozhi"><img src="{% static 'images/logo.png' %}"></div>
+    <div class="anniu-beijing">
+        <div class="anniu">
+        <div></div>
+        <div></div>
+        <div></div>
+        </div>
+    </div>
+	<div class="daohang">
+		<a href="/choose_product">作品<br>PROJECT
+			<div class="yuandian"></div>
+		</a>
+		<a href="/check_jianli">简历<br>RESUME</a>
+		<a>&nbsp;</a>
+		<a href="/connect">联系<br>CONTACT</a>
+		<a href="#">合作<br>COORPERATE</a>
+		<div class="clearfix"></div>
+	</div>
+	
+</div>
+<div class="neirong">
+	<div class="neirong-zuo">
+        <!-- <div class="zuopin-biaoti">THE BEAUTY OF LIFE</div>-->
+        <div class="zuopin-lunbo">
+        <!-- Swiper结构位置 -->
+          <div class="swiper-container">
+          <div class="swiper-wrapper">
+			{% for i in images %}
+				<div class="swiper-slide"><img src="/static/{{ i }}"></div>
+			{% endfor %}
+            </div>
+          </div>
+            <!-- Swiper JS 外联js -->
+          <script src="{% static 'js/swiper.min.js' %}"></script>
+            <!-- Initialize Swiper -->
+          <script>
+            var swiper = new Swiper('.swiper-container',{
+            autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+            },
+            loop: true,
+            });
+            </script>
+          </div>
+    </div>
+	<div class="neirong-you">
+        <div class="xinxi-xiang">
+            <div class="geren-biaoti">关于我</div>
+            <div class="zhanpian"></div>
+	    <div class="intraduce" style="line-height :24px; color:#000000 ">{{ aboutme }}<a href="https://blog.csdn.net/weixin_44516915">https://blog.csdn.net/weixini</br>_44516915</a></div>
+            <div class="lianjie"><a href="">详细介绍</a></div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="xinxi-xiang">
+            <div class="geren-biaoti">联系我</div>
+            <div class="zhanpian">
+            <img src="{% static 'images/weixin_QR.png' %}"></div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+</div>
+<script src="{% static 'js/jquery-2.1.1.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/jquery.preloader.min.js' %}" type="text/javascript"></script>
+<script type="text/javascript">
+	$(window).preloader({
+			delay: 5000
+		});
+</script>
+{% endblock content %}
